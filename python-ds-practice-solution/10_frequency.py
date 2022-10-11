@@ -1,6 +1,3 @@
-from typing import Counter
-
-
 def frequency(lst, search_term):
     """Return frequency of term in lst.
 
@@ -11,9 +8,4 @@ def frequency(lst, search_term):
         0
     """
 
-    freq = {}
-
-    for item in lst:
-        freq[item] = (freq.get(item) or 0) + 1
-
-    return freq.get(search_term, 0)
+    return lst.count(search_term)
