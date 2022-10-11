@@ -1,3 +1,7 @@
+from collections import Counter
+from dis import COMPILER_FLAG_NAMES
+
+
 def mode(nums):
     """Return most-common number in list.
 
@@ -11,3 +15,6 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    c = Counter(nums)
+    return c.most_common(1)[0][0]
